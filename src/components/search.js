@@ -6,7 +6,7 @@ angular.module('video-player').component('search', {
   },
 
   controller: function() {
-    console.log('search', this);
+    // console.log('search', this);
     this.searchString = 'kittens';
   }
 });
