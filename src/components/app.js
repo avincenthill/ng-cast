@@ -3,11 +3,8 @@ angular
 
   .component('app', {
     templateUrl: 'src/templates/app.html',
-    bindings: {
-      youtube: '<'
-    },
-    controller: function AppController() {
-      //get example videos from local dir
+    controller: function AppController($scope, youTube) {
+      console.log('app', this);
       this.videos = exampleVideoData;
       this.currentVideo = this.videos[0];
       this.selectVideo = () => {
@@ -17,13 +14,10 @@ angular
         alert('search result called');
       };
       this.videoTitleClick = function() {
-        //do stuff
         alert('video title click');
       };
-      // this.result = function() {
-      //   //do stuff
-      //   alert('result');
-      // };
-      // console.log('app', this);
+      this.search = function(q) {
+        youTube.search(q);
+      };
     }
   });

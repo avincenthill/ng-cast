@@ -2,10 +2,11 @@ angular.module('video-player').component('search', {
   templateUrl: 'src/templates/search.html',
   bindings: {
     result: '<',
-    youtube: '<'
+    search: '<'
   },
 
   controller: function() {
-    console.log(this);
+    console.log('search', this);
+    this.searchString = 'kittens';
   }
 });
