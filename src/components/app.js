@@ -9,11 +9,14 @@ angular
         alert('select video called');
       };
       this.searchResults = data => {
+        //TBD this is pointless
         // alert('search result called returning ' + data);
       };
-      this.videoTitleClick = function() {
-        alert('video title click');
-      };
+      this.videoTitleClick = function(data) {
+        console.log(data);
+        console.log(this);
+        this.currentVideo = data;
+      }.bind(this); //bind click action to app (this)
       this.search = function(q, cb) {
         youTube.search(q, cb);
       };
@@ -24,7 +27,7 @@ angular
         this.search('kittens', e => {
           this.videos = e;
           this.currentVideo = e[0];
-          console.log('data', this.videos);
+          // console.log('data', this.videos);
         });
       };
       this.init();

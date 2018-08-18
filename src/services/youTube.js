@@ -1,7 +1,7 @@
 angular.module('video-player').service('youTube', function($http) {
   // console.log('youTube', this);
   this.search = function(q = 'kittens', callback, key = YOUTUBE_API_KEY) {
-    console.log('search called');
+    // console.log('search called');
     $http({
       params: {
         part: 'snippet',
@@ -15,8 +15,8 @@ angular.module('video-player').service('youTube', function($http) {
       url: 'https://www.googleapis.com/youtube/v3/search'
     }).then(
       function successCallback(response) {
-        console.log('http successful');
-        console.log(response.data.items);
+        // console.log('http successful');
+        // console.log(response.data.items);
         callback(response.data.items);
       },
       function errorCallback(response) {
