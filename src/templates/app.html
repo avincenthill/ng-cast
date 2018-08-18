@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
       <search>
-      </search>
+      </search result="$ctrl.searchResults" youtube="$ctrl.youTube">
     </div>
   </nav>
   <div class="row">
@@ -11,7 +11,7 @@
       </video-player>
     </div>
     <div class="col-md-5">
-      <video-list videos="$ctrl.videos" on-click="$ctrl.videoTitleClick">
+      <video-list videos="$ctrl.videos" result="$ctrl.videoTitleClick">
       </video-list>
     </div>
     <div>

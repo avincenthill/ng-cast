@@ -8,15 +8,19 @@ angular
       this.videos = exampleVideoData;
       this.currentVideo = this.videos[0];
       this.selectVideo = () => {
-        //do stuff
+        alert('select video called');
       };
       this.searchResults = () => {
-        //do more stuff
+        alert('search result called');
       };
       this.videoTitleClick = function() {
         //do stuff
-        alert('click');
+        alert('video title click');
       };
-      console.log('app', this);
+      // this.result = function() {
+      //   //do stuff
+      //   alert('result');
+      // };
+      // console.log('app', this);
     }
   });

@@ -1,6 +1,11 @@
-angular
-  .module('video-player')
+angular.module('video-player').component('search', {
+  templateUrl: 'src/templates/search.html',
+  bindings: {
+    result: '<',
+    youtube: '<'
+  },
 
-  .component('search', {
-    templateUrl: 'src/templates/search.html'
-  });
+  controller: function() {
+    console.log(this);
+  }
+});

@@ -1,17 +1,25 @@
 angular.module('video-player').service('youTube', function() {
-  //TBD need to add search
-  // controller: function VideoController($scope, $http) {
-  //   $http({
-  //     method: 'GET',
-  //     url: 'https://www.googleapis.com/youtube/v3/search'
-  //   }).then(
-  //     function successCallback(response) {
-  //       return response;
-  //     },
-  //     function errorCallback(response) {
-  //       console.log('ERROR!');
-  //     }
-  //   );
-  // }
+  this.search = function(q) {
+    return () => {
+      console.log('search was called');
+      $http({
+        part: 'snippet',
+        type: 'video',
+        videoEmbeddable: true,
+        maxResults: 5,
+        q: q,
+        method: 'GET',
+        url: 'https://www.googleapis.com/youtube/v3/search'
+      }).then(
+        function successCallback(response) {
+          console.log(response);
+          return response;
+        },
+        function errorCallback(response) {
+          console.log('ERROR!');
+        }
+      );
+    };
+  };
   // alert('youTube got called');
 });

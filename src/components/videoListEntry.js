@@ -5,6 +5,6 @@ angular.module('video-player').component('videoListEntry', {
     videoTitleClick: '<'
   },
   controller: function VideoListEntryController() {
-    console.log('vlistentry', this);
+    // console.log('vlistentry', this);
   }
 });
