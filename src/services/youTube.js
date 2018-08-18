@@ -16,7 +16,7 @@ angular.module('video-player').service('youTube', function($http) {
     }).then(
       function successCallback(response) {
         console.log('http successful');
-        console.log(callback); //cb undefined
+        console.log(response.data.items);
         callback(response.data.items);
       },
       function errorCallback(response) {

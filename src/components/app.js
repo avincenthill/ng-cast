@@ -9,7 +9,7 @@ angular
         alert('select video called');
       };
       this.searchResults = data => {
-        alert('search result called returning ' + data);
+        // alert('search result called returning ' + data);
       };
       this.videoTitleClick = function() {
         alert('video title click');
