@@ -3,6 +3,9 @@ angular
 
   .component('app', {
     templateUrl: 'src/templates/app.html',
+    bindings: {
+      youtube: '<'
+    },
     controller: function AppController() {
       //get example videos from local dir
       this.videos = exampleVideoData;

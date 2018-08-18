@@ -1,4 +1,5 @@
 angular.module('video-player').service('youTube', function() {
+  console.log(this);
   this.search = function(q) {
     return () => {
       console.log('search was called');
@@ -21,5 +22,5 @@ angular.module('video-player').service('youTube', function() {
       );
     };
   };
-  // alert('youTube got called');
+  alert('youTube got called');
 });
