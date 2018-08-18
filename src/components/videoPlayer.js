@@ -7,9 +7,10 @@ angular
       currentVideo: '<'
     },
     controller: function VideoPlayerController() {
-      console.log('player', this);
+      // console.log('player', this);
       this.currentVideoUrl = () => {
-        let url = `www.youtube.com/embed/${this.currentVideo.id.videoId}`;
+        let url =
+          'https://www.youtube.com/embed/' + this.currentVideo.id.videoId;
         console.log(url);
         return url;
       };

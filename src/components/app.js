@@ -13,6 +13,10 @@ angular
       this.searchResults = () => {
         //do more stuff
       };
+      this.videoTitleClick = function() {
+        //do stuff
+        alert('click');
+      };
       console.log('app', this);
     }
   });

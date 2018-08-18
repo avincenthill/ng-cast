@@ -1,4 +1,5 @@
 angular.module('video-player').service('youTube', function() {
+  //TBD need to add search
   // controller: function VideoController($scope, $http) {
   //   $http({
   //     method: 'GET',
