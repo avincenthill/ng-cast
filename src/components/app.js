@@ -3,14 +3,16 @@ angular
 
   .component('app', {
     templateUrl: 'src/templates/app.html',
-    controller: function MainController() {
+    controller: function AppController() {
+      //get example videos from local dir
+      this.videos = exampleVideoData;
+      this.currentVideo = this.videos[0];
       this.selectVideo = () => {
         //do stuff
       };
       this.searchResults = () => {
         //do more stuff
       };
-      this.currentVideo = {};
-      this.videos = [];
+      console.log('app', this);
     }
   });
