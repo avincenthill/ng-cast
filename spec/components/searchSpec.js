@@ -19,8 +19,9 @@ describe('search', function() {
     scope.service = youTube;
     scope.result = resultSpy;
 
-
-    element = angular.element('<search data-service="service" data-result="result"></search>');
+    element = angular.element(
+      '<search data-service="service" data-result="result"></search>'
+    );
     element = $compile(element)(scope);
 
     $rootScope.$digest();
@@ -45,11 +46,9 @@ describe('search', function() {
     expect(element.isolateScope().$ctrl.result.callCount).to.equal(1);
   });
 
-
   // ADVANCED CONTENT TEST
-  xit('should have access to a search service within the scope', function() {
+  it('should have access to a search service within the scope', function() {
     expect(element.isolateScope().$ctrl.service).to.exist;
     expect(element.isolateScope().$ctrl.service).to.be.a('object');
   });
-
 });

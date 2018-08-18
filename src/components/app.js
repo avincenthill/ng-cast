@@ -13,8 +13,8 @@ angular
         // alert('search result called returning ' + data);
       };
       this.videoTitleClick = function(data) {
-        console.log(data);
-        console.log(this);
+        // console.log(data);
+        // console.log(this);
         this.currentVideo = data;
       }.bind(this); //bind click action to app (this)
       this.search = function(q, cb) {
